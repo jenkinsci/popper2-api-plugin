@@ -26,10 +26,10 @@ In order to use this JS library, add a maven dependency to your pom:
 </dependency>
 ----
 
-Then you can use Popper.js in your jelly files using the following snippet:
+Then you can use Popper.js 2 in your jelly files using the following snippet:
 
 [source,xml]
 ----
-<st:adjunct includes="io.jenkins.plugins.popper"/>
+<st:adjunct includes="io.jenkins.plugins.popper2"/>
 ----
 
