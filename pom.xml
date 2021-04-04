@@ -1,0 +1,124 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.jvnet.hudson.plugins</groupId>
+    <artifactId>analysis-pom</artifactId>
+    <version>5.3.0</version>
+    <relativePath />
+  </parent>
+
+  <artifactId>popper2-api</artifactId>
+  <groupId>io.jenkins.plugins</groupId>
+  <packaging>hpi</packaging>
+  <name>Popper.js 2 API Plugin</name>
+  <version>${revision}${changelist}</version>
+
+  <description>Provides Popper.js 2.x for Jenkins plugins.</description>
+  <url>https://github.com/jenkinsci/popper2-api-plugin</url>
+
+  <properties>
+    <revision>2.5.4-1</revision>
+    <changelist>-SNAPSHOT</changelist>
+    <popper.version>2.5.4</popper.version>
+
+    <module.name>${project.groupId}.popper</module.name>
+  </properties>
+
+  <licenses>
+    <license>
+      <name>MIT license</name>
+      <comments>All source code is under the MIT license.</comments>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <name>Ullrich Hafner</name>
+      <id>uhafner</id>
+      <email>ullrich.hafner@gmail.com</email>
+    </developer>
+  </developers>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>popper.js</artifactId>
+      <version>${popper.version}</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>unpack-dependencies</id>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>unpack-dependencies</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/webjars</outputDirectory>
+              <includeArtifactIds>popper.js</includeArtifactIds>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>copy-resources</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>copy-resources</goal>
+            </goals>
+            <configuration>
+              <outputDirectory>${project.build.directory}/${project.artifactId}/webjars</outputDirectory>
+              <resources>
+                <resource>
+                  <directory>
+                    ${project.build.directory}/webjars/META-INF/resources/webjars/popper.js/${popper.version}
+                  </directory>
+                  <filtering>false</filtering>
+                </resource>
+              </resources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <scm>
+    <connection>scm:git:git://github.com/jenkinsci/popper2-api-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:jenkinsci/popper2-api-plugin.git</developerConnection>
+    <url>https://github.com/jenkinsci/popper2-api-plugin</url>
+    <tag>${scmTag}</tag>
+  </scm>
+
+  <repositories>
+    <repository>
+      <id>repo.jenkins-ci.org</id>
+      <url>https://repo.jenkins-ci.org/public/</url>
+    </repository>
+    <repository>
+      <id>incrementals.jenkins-ci.org</id>
+      <url>https://repo.jenkins-ci.org/incrementals/</url>
+    </repository>
+  </repositories>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>repo.jenkins-ci.org</id>
+      <url>https://repo.jenkins-ci.org/public/</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+</project>
+

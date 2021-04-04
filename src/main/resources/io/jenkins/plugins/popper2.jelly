@@ -1,0 +1,12 @@
+<?jelly escape-by-default='true'?>
+<!--
+Use it like <st:adjunct includes="io.jenkins.plugins.popper2"/>
+-->
+<j:jelly xmlns:j="jelly:core">
+
+  <j:new var="h" className="hudson.Functions" />
+  ${h.initPageVariables(context)}
+
+  <script type="text/javascript" src="${resURL}/plugin/popper2-api/webjars/umd/popper.min.js"/>
+
+</j:jelly>
