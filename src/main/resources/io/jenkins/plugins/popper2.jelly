@@ -7,6 +7,6 @@ Use it like <st:adjunct includes="io.jenkins.plugins.popper2"/>
   <j:new var="h" className="hudson.Functions" />
   ${h.initPageVariables(context)}
 
-  <script type="text/javascript" src="${resURL}/plugin/popper2-api/webjars/umd/popper.min.js"/>
+  <script type="text/javascript" src="${resURL}/plugin/popper2-api/webjars/popper.min.js"/>
 
 </j:jelly>
