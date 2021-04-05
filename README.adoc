@@ -1,6 +1,6 @@
 :tip-caption: :bulb:
 
-= Popper.js Jenkins Plugin
+= Popper.js 2 Jenkins Plugin
 
 image:https://img.shields.io/jenkins/plugin/v/popper2-api.svg?label=latest%20version[Jenkins Plugin, link=https://plugins.jenkins.io/popper2-api]
 image:https://img.shields.io/badge/Jenkins-2.249.1-green.svg?label=min.%20Jenkins[Jenkins Version, link=https://jenkins.io/download/lts]
@@ -8,10 +8,8 @@ image:https://ci.jenkins.io/job/Plugins/job/popper2-api-plugin/job/master/badge/
 image:https://github.com/jenkinsci/popper2-api-plugin/workflows/GitHub%20CI/badge.svg?branch=master[GitHub Actions, link=https://github.com/jenkinsci/popper2-api-plugin/actions]
 image:https://img.shields.io/github/issues-pr/jenkinsci/popper2-api-plugin.svg[GitHub pull requests, link=https://github.com/jenkinsci/popper2-api-plugin/pulls]
 
-Provides https://popper.js.org[Popper.js] for Jenkins Plugins. Popper can
+Provides https://popper.js.org[Popper.js] 2 for Jenkins Plugins. Popper can
 easily position tooltips, popovers or anything else with just a line of code.
-
-This plugin contains the latest https://www.webjars.org[WebJars] release and corresponding Jenkins UI elements.
 
 == How to use the plugin
 
