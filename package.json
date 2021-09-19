@@ -1,6 +1,6 @@
 {
-  "name": "popper2",
-  "version": "2.9.3",
+  "name": "popper2-api",
+  "version": "2.10.1",
   "description": "Popper.js 2 Jenkins Plugin",
   "directories": {
     "doc": "doc"
