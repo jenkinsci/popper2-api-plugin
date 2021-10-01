@@ -18,7 +18,7 @@
   <url>https://github.com/jenkinsci/popper2-api-plugin</url>
 
   <properties>
-    <revision>2.10.1-2</revision>
+    <revision>2.10.2-1</revision>
     <changelist>-SNAPSHOT</changelist>
     <popper.version>2.5.4</popper.version>
 
