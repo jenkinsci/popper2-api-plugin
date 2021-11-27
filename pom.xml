@@ -20,7 +20,6 @@
   <properties>
     <revision>2.10.2-2</revision>
     <changelist>-SNAPSHOT</changelist>
-    <popper.version>2.5.4</popper.version>
 
     <module.name>${project.groupId}.popper</module.name>
   </properties>
