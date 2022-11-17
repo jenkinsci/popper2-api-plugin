@@ -94,7 +94,7 @@
   </build>
 
   <scm>
-    <connection>scm:git:git://github.com/jenkinsci/popper2-api-plugin.git</connection>
+    <connection>scm:git:https://github.com/jenkinsci/popper2-api-plugin.git</connection>
     <developerConnection>scm:git:git@github.com:jenkinsci/popper2-api-plugin.git</developerConnection>
     <url>https://github.com/jenkinsci/popper2-api-plugin</url>
     <tag>${scmTag}</tag>
