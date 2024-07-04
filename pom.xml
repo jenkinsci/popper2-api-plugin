@@ -12,13 +12,13 @@
   <groupId>io.jenkins.plugins</groupId>
   <packaging>hpi</packaging>
   <name>Popper.js 2 API Plugin</name>
-  <version>2.11.6-5</version>
+  <version>${revision}${changelist}</version>
 
   <description>Provides Popper.js 2.x for Jenkins plugins.</description>
   <url>https://github.com/jenkinsci/popper2-api-plugin</url>
 
   <properties>
-    <revision>2.11.6-5</revision>
+    <revision>2.11.6-6</revision>
     <changelist>-SNAPSHOT</changelist>
 
     <module.name>${project.groupId}.popper</module.name>
